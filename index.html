@@ -57,20 +57,25 @@
   h2.title{text-align:center;font-size:1.7rem;margin:8px 0 40px}
 
   /* SKILLS */
+  .skill-group{margin-bottom:28px}
+  .skill-group:last-child{margin-bottom:0}
+  .skill-group h4{text-align:center;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
   .skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .chip{background:var(--chip);border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-size:.9rem;color:var(--text)}
+  .chip{background:var(--chip);border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-size:.9rem;color:var(--text);transition:.2s}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
 
   /* PROJECTS */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s;display:flex;flex-direction:column}
   .card:hover{transform:translateY(-4px);border-color:var(--accent)}
-  .logo{width:56px;height:56px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:#fff;overflow:hidden;margin-bottom:16px}
-  .logo img{width:100%;height:100%;object-fit:cover}
+  .logo{width:56px;height:56px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:var(--navy);overflow:hidden;margin-bottom:16px;padding:8px}
+  .logo img{width:100%;height:100%;object-fit:contain}
   .card h3{font-size:1.18rem;margin-bottom:4px}
   .card .tag{color:var(--accent);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
   .card p{color:var(--muted);font-size:.94rem;flex:1;margin-bottom:16px}
   .card .link{color:var(--accent);font-weight:600;font-size:.9rem}
   .card .link:hover{text-decoration:underline}
+  .card .link.disabled{color:var(--muted);cursor:default;pointer-events:none}
 
   /* CONTACT */
   .contact{text-align:center}
@@ -113,18 +118,54 @@
   <div class="wrap">
     <div class="kicker">What I do</div>
     <h2 class="title">Skills &amp; Services</h2>
-    <div class="skills">
-      <!-- زوّد أو امسح أي chip -->
-      <span class="chip">Domain &amp; DNS Setup</span>
-      <span class="chip">Web Hosting / cPanel</span>
-      <span class="chip">Corporate Email</span>
-      <span class="chip">SSL &amp; Security</span>
-      <span class="chip">Website Upload &amp; Launch</span>
-      <span class="chip">Email Signature Design</span>
-      <span class="chip">Backups &amp; Monitoring</span>
-      <span class="chip">Social Media Setup</span>
-      <span class="chip">Ongoing Maintenance</span>
+
+    <div class="skill-group">
+      <h4>Development</h4>
+      <div class="skills">
+        <span class="chip">PHP</span>
+        <span class="chip">Laravel</span>
+        <span class="chip">Python</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">Tailwind CSS</span>
+        <span class="chip">Bootstrap</span>
+        <span class="chip">Alpine.js</span>
+        <span class="chip">AJAX</span>
+      </div>
     </div>
+
+    <div class="skill-group">
+      <h4>Databases</h4>
+      <div class="skills">
+        <span class="chip">MySQL</span>
+        <span class="chip">SQLite</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Hosting &amp; Infrastructure</h4>
+      <div class="skills">
+        <span class="chip">cPanel</span>
+        <span class="chip">Webuzo</span>
+        <span class="chip">Cloudflare</span>
+        <span class="chip">Domain &amp; DNS Setup</span>
+        <span class="chip">SSL &amp; Security</span>
+        <span class="chip">Backups &amp; Monitoring</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Digital Services</h4>
+      <div class="skills">
+        <span class="chip">Corporate Email</span>
+        <span class="chip">Website Upload &amp; Launch</span>
+        <span class="chip">Email Signature Design</span>
+        <span class="chip">Social Media Setup</span>
+        <span class="chip">Ongoing Maintenance</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -147,19 +188,51 @@
       <!-- ===== نهاية الكارت ===== -->
 
       <article class="card">
-        <div class="logo"><img src="logos/project2.png" alt="" onerror="this.parentNode.textContent='2'"></div>
-        <div class="tag">Category</div>
-        <h3>Project Name</h3>
-        <p>Short description of what you delivered for this client — one or two lines.</p>
-        <a class="link" href="#" target="_blank" rel="noopener">View project →</a>
+        <div class="logo"><img src="logos/seoestore.png" alt="SEOeStore" onerror="this.parentNode.textContent='S'"></div>
+        <div class="tag">SEO Panel &amp; Hosting</div>
+        <h3>SEOeStore</h3>
+        <p>Hosting, server, and technical management for an SEO services panel serving resellers worldwide.</p>
+        <a class="link" href="https://panel.seoestore.net" target="_blank" rel="noopener">panel.seoestore.net →</a>
       </article>
 
       <article class="card">
-        <div class="logo"><img src="logos/project3.png" alt="" onerror="this.parentNode.textContent='3'"></div>
-        <div class="tag">Category</div>
-        <h3>Project Name</h3>
-        <p>Short description of what you delivered for this client — one or two lines.</p>
-        <a class="link" href="#" target="_blank" rel="noopener">View project →</a>
+        <div class="logo"><img src="logos/1billionlinks.png" alt="1 Billion Links" onerror="this.parentNode.textContent='1B'"></div>
+        <div class="tag">SEO Platform &amp; Hosting</div>
+        <h3>1 Billion Links</h3>
+        <p>Technical setup and ongoing management for a large-scale SEO backlinks platform.</p>
+        <a class="link" href="https://1billionlinks.com" target="_blank" rel="noopener">1billionlinks.com →</a>
+      </article>
+
+      <article class="card">
+        <div class="logo"><img src="logos/captchaai.png" alt="CaptchaAI" onerror="this.parentNode.textContent='C'"></div>
+        <div class="tag">SaaS &amp; Hosting</div>
+        <h3>CaptchaAI</h3>
+        <p>Domain, hosting, and infrastructure management for an AI-powered CAPTCHA solving service.</p>
+        <a class="link" href="https://captchaai.com" target="_blank" rel="noopener">captchaai.com →</a>
+      </article>
+
+      <article class="card">
+        <div class="logo"><img src="logos/teletravelco.png" alt="Tele Travel" onerror="this.parentNode.textContent='T'"></div>
+        <div class="tag">Website &amp; Technical Management</div>
+        <h3>Tele Travel</h3>
+        <p>Website hosting, domain, and technical management for a travel &amp; tourism company.</p>
+        <a class="link" href="https://teletravelco.com" target="_blank" rel="noopener">teletravelco.com →</a>
+      </article>
+
+      <article class="card">
+        <div class="logo"><img src="logos/freeindexer.png" alt="FreeIndexer" onerror="this.parentNode.textContent='F'"></div>
+        <div class="tag">SEO Tool &amp; Hosting</div>
+        <h3>FreeIndexer</h3>
+        <p>Hosting and technical management for a free backlink indexing tool.</p>
+        <a class="link" href="https://freeindexer.com" target="_blank" rel="noopener">freeindexer.com →</a>
+      </article>
+
+      <article class="card">
+        <div class="logo"><img src="logos/watania.png" alt="Watania" onerror="this.parentNode.textContent='W'"></div>
+        <div class="tag">HR &amp; ERP System</div>
+        <h3>Watania</h3>
+        <p>Built and maintained an internal HR / ERP system covering employee management and company operations.</p>
+        <span class="link disabled">Private system</span>
       </article>
 
     </div>
