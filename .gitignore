@@ -1,0 +1,8 @@
+# Office lock & temp files
+.~lock.*#
+~$*
+*.tmp
+
+# Duplicate copies
+* - Copy.docx
+* - Copy (*).docx
